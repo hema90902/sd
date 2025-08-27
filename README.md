@@ -24,3 +24,10 @@ Listens on `ws://0.0.0.0:8080`.
 ## Notes
 - Uses STUN: Google + Twilio (UDP) in `RtcMesh.kt`.
 - Full-mesh works best for small groups (<=6). For larger rooms, consider SFU or server fanout.
+
+## Releases (GitHub Actions)
+- Workflow builds a debug APK on tag push `vX.Y.Z` or manual run and publishes a GitHub Release with the APK.
+- To release:
+  1. Commit your changes and push.
+  2. Create a tag, e.g. `git tag v1.0.0 && git push origin v1.0.0`.
+  3. Check the Actions tab; once finished, see the Releases page for the APK.
