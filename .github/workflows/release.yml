@@ -51,3 +51,13 @@ jobs:
         with:
           files: android-app/app/build/outputs/apk/debug/*.apk
 
+      - name: Create Draft Release (manual run)
+        if: ${{ !startsWith(github.ref, 'refs/tags/') }}
+        uses: softprops/action-gh-release@v2
+        with:
+          draft: true
+          tag_name: manual-${{ github.run_id }}
+          name: Manual build ${{ github.run_number }}
+          target_commitish: ${{ github.sha }}
+          files: android-app/app/build/outputs/apk/debug/*.apk
+
