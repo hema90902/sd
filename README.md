@@ -21,6 +21,10 @@ Listens on `ws://0.0.0.0:8080`.
    - Physical device: change to host IP, e.g. `ws://192.168.1.10:8080`.
 3. Run on 2+ devices/emulators, enter same Room ID, and chat.
 
+### Install issues (There was a problem parsing this package)
+- Fixed defaults: `minSdk=21`, legacy JNI packaging, `extractNativeLibs=true`.
+- Rebuild the APK via Actions; download the new APK from Releases or `finishs/` and install.
+
 ## Notes
 - Uses STUN: Google + Twilio (UDP) in `RtcMesh.kt`.
 - Full-mesh works best for small groups (<=6). For larger rooms, consider SFU or server fanout.

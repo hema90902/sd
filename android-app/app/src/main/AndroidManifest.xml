@@ -10,7 +10,8 @@
         android:label="P2P Group Chat"
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"
-        android:theme="@style/Theme.P2PGroupChat">
+        android:theme="@style/Theme.P2PGroupChat"
+        android:extractNativeLibs="true">
 
         <activity android:name=".MainActivity">
             <intent-filter>
